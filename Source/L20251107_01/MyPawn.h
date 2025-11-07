@@ -6,6 +6,13 @@
 #include "GameFramework/Pawn.h"
 #include "MyPawn.generated.h"
 
+class UBoxComponent;
+class UStaticMeshComponent;
+class UCameraComponent;
+class UFloatingPawnMovement;
+class USpringArmComponent;
+class UArrowComponent;
+
 UCLASS()
 class L20251107_01_API AMyPawn : public APawn
 {
@@ -26,4 +33,18 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+public:
+	UBoxComponent* Box;
+
+	UStaticMeshComponent* Body;
+	UStaticMeshComponent* Left;
+	UStaticMeshComponent* Right;
+
+	USpringArmComponent* SpringArm;
+
+	UCameraComponent* Camera;
+
+	UFloatingPawnMovement* Movement;
+
+	UArrowComponent* Arrow;
 };
