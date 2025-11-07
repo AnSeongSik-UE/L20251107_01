@@ -34,17 +34,25 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 public:
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Components")
 	UBoxComponent* Box;
 
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Components")
 	UStaticMeshComponent* Body;
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Components")
 	UStaticMeshComponent* Left;
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Components")
 	UStaticMeshComponent* Right;
 
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Components")
 	USpringArmComponent* SpringArm;
 
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Components")
 	UCameraComponent* Camera;
 
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Components")
 	UFloatingPawnMovement* Movement;
 
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Components")
 	UArrowComponent* Arrow;
 };
